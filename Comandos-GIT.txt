@@ -1,0 +1,35 @@
+git status: muestra los ultimos cambios realizados (delete, modified, etc)
+git diff: muestra las diferencias entre el codigo antiguo y el nuevo
+git add: confirma el cambio de un archivo ej: git add readme.txt, lo deja preparado para el commit
+git add -p (nombre del archivo): confirma el cambio de PARTE del archivo ej: git add readme.txt, lo deja preparado para el commit
+git rm: borra archivos del repositorio ej: git rm readme.txt
+git commit 
+git commit -m "Modifico archivo readme": commit sin tener que ir a vim
+git commit -am "Modifico archivo readme": commit de todos los cambios realizados, sin tener que marcar con add
+git commit --amend: permite editar el ultimo commit (¡No utilizar si ya se hizo push!)
+//comentando Closes #numero en un commit puedo cerrar un issue
+git reset --soft HEAD~1: elimina el ultimo commit sin eliminar los archivos 
+git reset HEAD index.html:  invierte el ultimo add hecho a index.html
+git remote: muestra a que repositorio esta vinculado el proyecto (por defecto origin)
+git remote -v: muestra a que repositorio esta vinculado el proyecto (link)
+git push (repositorio) (rama): sube los cambios al repositorio ej: git push origin master
+git pull (repositorio) (rama): descarga los cambios del repositorio ej: git pull origin master 
+git log: historial de cambios
+git log --decorate: historial de cambios ampliado
+git log --graph --decorate --oneline --all: muestra todos los commit en forma vertical (de todas las ramas)
+git branch: muestra las ramas del proyecto 
+git branch (nombre-rama): crea una nueva rama
+git checkout (nombre-rama): cambia hacia la rama seleccionada
+git checkout -b (nombre-rama): crea la rama y cambia hacia la rama creada 
+git merge (nombre-rama): integra los cambios hechos en otra rama 
+git branch -d (nombre-rama): elimina una rama (deve haberse integrado a master para poder eliminarla)
+git branch -D (nombre-rama): elimina una rama sin importar si esta se integro a master
+git gc: borra basura del repositorio 
+git clone (git@github.com:bastian14/pagina-web.git): clona un repositorio desde la web a local 
+git config --global --edit: https://stackoverflow.com/questions/40069344/remote-rejected-master-master-permission-denied
+git config --global --list: conocer el usuario activo
+git config --global --add user.name "El nuevo usuario"
+git config --global --add user.email "nuevo@correo.com" 
+git init: crear un repositorio en una carpeta
+jekyll new (nombre-de-la-pagina): crea una página jekyll
+bundle exec jekyll serve --watch: encender servidor de Jekyll
